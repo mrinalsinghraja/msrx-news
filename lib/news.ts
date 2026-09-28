@@ -148,3 +148,10 @@ export function formatDate(iso: string): string {
     timeZone: "UTC",
   });
 }
+
+// Build-time guard: every brief carries 5–10 sources, as /standards promises.
+for (const s of stories) {
+  if (s.sources.length < 5 || s.sources.length > 10) {
+    throw new Error(`news.ts: "${s.slug}" has ${s.sources.length} sources; the house rule is 5 to 10`);
+  }
+}
