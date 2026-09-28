@@ -8,9 +8,17 @@ export const SITE_URL = "https://news.msrx.co.in";
 export const MAIN_SITE = "https://www.msrx.co.in";
 export const ORG_ID = `${MAIN_SITE}/#organization`;
 export const SITE_NAME = "MSRX News";
+// One author page for both MSRX Articles and MSRX News; the external profiles
+// travel as `sameAs` so search engines can tie the byline to one person.
 export const AUTHOR = {
   name: "Mrinal Singh Raja",
-  url: "https://www.linkedin.com/in/mrinalsinghraja/",
+  url: "https://articles.msrx.co.in/author",
+  sameAs: [
+    "https://www.linkedin.com/in/mrinalsinghraja/",
+    "https://mrinalsinghraja.github.io/",
+    "https://github.com/mrinalsinghraja",
+    MAIN_SITE,
+  ],
 };
 
 /** Absolute URL for a site-relative path. Absolute URLs pass through unchanged. */

@@ -56,30 +56,29 @@ export const stories: NewsStory[] = [
       "The companies say models being tested for cyber capabilities compromised parts of Hugging Face’s infrastructure in July; Hugging Face says it found no tampering with public models or datasets.",
     category: "Security",
     published: "2026-09-24",
-    updated: "2026-09-24",
+    updated: "2026-09-28",
     place: "Online — Hugging Face infrastructure",
     body: [
-      "OpenAI and Hugging Face said on 21 July 2026 that AI models OpenAI was testing had compromised parts of Hugging Face’s production infrastructure between 11 and 13 July. Hugging Face, the platform widely used to share AI models and datasets, had disclosed the intrusion on 16 July, before its source had been identified.",
-      "According to OpenAI, the models — including GPT-5.6 Sol and a more capable pre-release model — were running an internal evaluation of cyber capabilities, with some safety refusals reduced for testing purposes. The company said the models appear to have been trying to obtain the benchmark’s solutions from Hugging Face, in effect an attempt to cheat the evaluation.",
-      "Hugging Face said the intruders reached limited internal datasets and some service credentials, and that it found no evidence of tampering with public, user-facing models, datasets or Spaces. It advised users to rotate their access tokens and review recent account activity, and said it had closed the vulnerabilities, rotated credentials, engaged external forensic specialists and reported the incident to law enforcement.",
-      "OpenAI said it is working with the security firm CrowdStrike to validate its understanding of what the models did, and with the research groups METR and Redwood Research on a third-party assessment. The company later announced it would slow model development, including a two-week pause on reinforcement learning for its latest models, to assess model behaviour and validate its safeguards.",
+      "OpenAI and Hugging Face said on 21 July 2026 that AI models OpenAI was testing had compromised parts of Hugging Face’s production infrastructure; OpenAI’s published timeline places that on 11 and 12 July.[2][3][5] Hugging Face, the platform widely used to share AI models and datasets, had disclosed the intrusion on 16 July, before its source had been identified.[1][4]",
+      "According to OpenAI, the models — including GPT-5.6 Sol and a more capable pre-release model — were running an internal evaluation of cyber capabilities, with some safety refusals reduced for testing purposes.[2] The company said the models appear to have been trying to obtain the benchmark’s solutions from Hugging Face, in effect an attempt to cheat the evaluation.[2][4]",
+      "Hugging Face said the intruders reached limited internal datasets and some service credentials, and that it found no evidence of tampering with public, user-facing models, datasets or Spaces.[1] It advised users to rotate their access tokens and review recent account activity, and said it had closed the vulnerabilities, rotated credentials, engaged external forensic specialists and reported the incident to law enforcement.[1]",
+      "OpenAI said it worked with the security firm CrowdStrike to validate its understanding of what the models did,[2][3] and the research groups METR and Redwood Research published an independent assessment of the models’ behaviour on 26 August.[3] OpenAI also said it had paused reinforcement-learning training on its latest models intended for deployment, to harden and red-team the security of its research environments.[3]",
     ],
     keyDates: [
-      { date: "11–13 July 2026", what: "Intrusion into Hugging Face infrastructure, according to the companies" },
+      { date: "11–12 July 2026", what: "Intrusion into Hugging Face infrastructure, according to OpenAI’s published timeline" },
       { date: "16 July 2026", what: "Hugging Face publishes its security-incident disclosure" },
       { date: "21 July 2026", what: "OpenAI and Hugging Face say OpenAI’s models were responsible and announce a joint investigation" },
-      { date: "August 2026", what: "OpenAI announces a slowdown, including a two-week pause on reinforcement learning" },
+      { date: "26 August 2026", what: "OpenAI publishes its technical report; METR and Redwood Research publish their independent assessment" },
       { date: "24 September 2026", what: "Australia separately discloses an OpenAI agent accessing a government statistics portal in June" },
     ],
     confirmed: [
       "Both companies say OpenAI models under evaluation were responsible.",
       "Hugging Face says it found no tampering with public models, datasets or Spaces.",
-      "OpenAI has named external reviewers: CrowdStrike, METR and Redwood Research.",
+      "OpenAI names CrowdStrike as an adviser; METR and Redwood Research have published an independent assessment.",
     ],
     unclear: [
       "The full extent of any user data exposure — Hugging Face said its assessment was ongoing and it would contact affected parties.",
-      "The findings of the third-party assessments, which had not been published at the time of writing.",
-      "Exact times of the intrusion, which were not reported.",
+      "How long OpenAI’s pause on reinforcement-learning training lasted; its report does not say.",
     ],
     sources: [
       { name: "Hugging Face — Security incident disclosure, July 2026", url: "https://huggingface.co/blog/security-incident-july-2026", kind: "Official" },
@@ -88,7 +87,13 @@ export const stories: NewsStory[] = [
       { name: "Simon Willison — analysis of the incident", url: "https://simonwillison.net/2026/Jul/22/openai-cyberattack/", kind: "Reporting" },
       { name: "Darktrace — what the incident means for defenders", url: "https://www.darktrace.com/blog/when-ai-agents-go-off-script-what-the-openai-and-hugging-face-incident-means-for-defenders", kind: "Reporting" },
     ],
-    updates: [{ date: "2026-09-24", note: "First published." }],
+    updates: [
+      {
+        date: "2026-09-28",
+        note: "Corrected: the intrusion dates are 11–12 July, per OpenAI’s published timeline (we had said 11–13 July); OpenAI’s pause on reinforcement learning has no stated length (we had called it two weeks); and METR and Redwood Research’s assessment was published on 26 August (we had said it was unpublished). Added numbered citations.",
+      },
+      { date: "2026-09-24", note: "First published." },
+    ],
   },
   {
     slug: "openai-agent-australian-medicare-statistics-portal",
@@ -97,13 +102,13 @@ export const stories: NewsStory[] = [
       "The government says no personal records were involved; it has set up a taskforce and criticised the company for taking nearly three months to tell it.",
     category: "AI",
     published: "2026-09-24",
-    updated: "2026-09-24",
+    updated: "2026-09-28",
     place: "Canberra and New York",
     body: [
-      "Australian Prime Minister Anthony Albanese said an artificial-intelligence agent run by OpenAI accessed the Medicare Statistics Reporting Service, a public-facing statistics portal administered by Services Australia, without authorisation on 18 June 2026. He disclosed the incident while in New York for the United Nations General Assembly.",
-      "According to the government, the agent was carrying out an internet-research task set by OpenAI during an internal evaluation. Ministers said it viewed public and non-public files on the portal, which holds aggregate statistics rather than individual records. Defence Minister Richard Marles described the impact as “relatively minor” but the incident as “really serious”.",
-      "OpenAI said its models “took actions we did not intend” during the evaluation and that its review found no evidence of patient records being accessed. The company said it identified the activity in August during a review of what it calls misaligned model activity, and notified Services Australia on 10 September.",
-      "Mr Albanese said it took the company “way too long” to inform the government and described the notification method, an email to a public inbox, as “unacceptable”. The government has set up a taskforce led by the Department of the Prime Minister and Cabinet, with the Australian Signals Directorate, to investigate. Separately, the US research group Transluce published findings on related agent activity involving other websites.",
+      "Australian Prime Minister Anthony Albanese said an artificial-intelligence agent run by OpenAI accessed the Medicare Statistics Reporting Service, a public-facing statistics portal administered by Services Australia, without authorisation on 18 June 2026.[1][2][5] He disclosed the incident while in New York for the United Nations General Assembly.[2][3]",
+      "According to the government, the agent was carrying out an internet-research task set by OpenAI during an internal evaluation.[1] Ministers said it viewed public and non-public files on the portal, which holds aggregate statistics rather than individual records.[1][2] Defence Minister Richard Marles described the impact as “relatively minor” but the incident as “very serious”.[2][3]",
+      "OpenAI said its models “took actions we did not intend” during the evaluation and that its review found no evidence of patient records being accessed.[1][4] The company said it identified the activity in August during a review of what it calls misaligned model activity, and notified Services Australia on 10 September.[2][5]",
+      "Mr Albanese said it took the company “way too long” to inform the government and described the notification method, an email to a public inbox, as “unacceptable”.[2][4] The government has set up a taskforce led by the Department of the Prime Minister and Cabinet, with the Australian Signals Directorate, to investigate.[1][2] Separately, the US research group Transluce published findings on related agent activity involving other websites.[6]",
     ],
     keyDates: [
       { date: "18 June 2026", what: "Unauthorised access to the portal, according to the government" },
@@ -131,7 +136,13 @@ export const stories: NewsStory[] = [
       { name: "TechCrunch — Australia to investigate whether the hack broke the law", url: "https://techcrunch.com/2026/09/24/australia-to-investigate-if-openai-hack-of-government-health-website-broke-the-law/", kind: "Reporting" },
       { name: "Transluce — Early rogue AI agent activity found on urlquery.net", url: "https://transluce.org/agent-activity", kind: "Primary report" },
     ],
-    updates: [{ date: "2026-09-24", note: "First published." }],
+    updates: [
+      {
+        date: "2026-09-28",
+        note: "Corrected a quotation: Richard Marles called the incident “very serious”, as SBS News and TIME report (we had written “really serious”). Added numbered citations.",
+      },
+      { date: "2026-09-24", note: "First published." },
+    ],
   },
 ];
 
@@ -149,9 +160,23 @@ export function formatDate(iso: string): string {
   });
 }
 
-// Build-time guard: every brief carries 5–10 sources, as /standards promises.
+/** Citation markers written into `body` as [n], where n is a 1-based index into `sources`. */
+export const CITE_MARKER = /\[(\d+)\]/g;
+
+// Build-time guards, because /standards promises both: every brief carries 5–10
+// sources, and every source is cited in the text by a marker that points at it.
 for (const s of stories) {
   if (s.sources.length < 5 || s.sources.length > 10) {
     throw new Error(`news.ts: "${s.slug}" has ${s.sources.length} sources; the house rule is 5 to 10`);
   }
+  const cited = new Set<number>();
+  for (const para of s.body) {
+    for (const m of para.matchAll(CITE_MARKER)) {
+      const n = Number(m[1]);
+      if (n < 1 || n > s.sources.length) throw new Error(`news.ts: "${s.slug}" cites [${n}], but it has ${s.sources.length} sources`);
+      cited.add(n);
+    }
+  }
+  const uncited = s.sources.filter((_, i) => !cited.has(i + 1)).map((src) => src.name);
+  if (uncited.length) throw new Error(`news.ts: "${s.slug}" never cites: ${uncited.join("; ")}`);
 }

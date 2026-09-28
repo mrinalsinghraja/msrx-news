@@ -26,6 +26,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+/** Turn the [n] markers in a paragraph into superscript links to source n. */
+function withCitations(text: string, sources: { name: string }[]) {
+  return text.split(/(\[\d+\])/g).map((part, i) => {
+    const m = /^\[(\d+)\]$/.exec(part);
+    if (!m) return part;
+    const n = Number(m[1]);
+    return (
+      <sup key={i} className="cite">
+        <a href={`#source-${n}`} aria-label={`Source ${n}: ${sources[n - 1].name}`}>[{n}]</a>
+      </sup>
+    );
+  });
+}
+
 const KIND_STYLE = {
   Official: { c: "var(--fig-green)", s: "var(--fig-green-soft)" },
   "Primary report": { c: "var(--fig-violet)", s: "var(--fig-violet-soft)" },
@@ -76,13 +90,13 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
             {s.updated !== s.published && <> · updated <time dateTime={s.updated}>{formatDate(s.updated)}</time></>}
           </span>
           <span className="inline-flex items-center gap-1.5"><MapPin size={14} aria-hidden="true" /> {s.place}</span>
-          <span>By {AUTHOR.name}</span>
+          <span>By <a href={AUTHOR.url} rel="author" className="font-medium text-[var(--text-secondary)] underline-offset-4 hover:underline">{AUTHOR.name}</a></span>
         </div>
 
         <div className="rule-fade my-8" />
 
         <div className="space-y-5 text-[17px] leading-[1.75] text-[var(--text-secondary)]">
-          {s.body.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}
+          {s.body.map((p) => <p key={p.slice(0, 40)}>{withCitations(p, s.sources)}</p>)}
         </div>
 
         <section aria-labelledby="dates" className="mt-10">
@@ -117,12 +131,13 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
 
         <section aria-labelledby="sources" className="mt-10">
           <h2 id="sources" className="display-sm text-[21px] text-[var(--text-primary)] mb-3">Sources</h2>
-          <ul className="space-y-2">
-            {s.sources.map((src) => {
+          <ol className="space-y-2">
+            {s.sources.map((src, i) => {
               const k = KIND_STYLE[src.kind];
               return (
-                <li key={src.url}>
+                <li key={src.url} id={`source-${i + 1}`} className="source-entry">
                   <a href={src.url} rel="noopener" className="flex items-start gap-3 rounded-[var(--radius)] border border-[var(--border)] bg-[var(--card)] px-4 py-3 hover:bg-[var(--paper-tint)]">
+                    <span className="mono text-[12.5px] text-[var(--text-tertiary)] shrink-0 mt-0.5 w-6">[{i + 1}]</span>
                     <span className="mono text-[10.5px] font-semibold uppercase tracking-[0.1em] rounded px-1.5 py-0.5 shrink-0 mt-0.5" style={{ color: k.c, background: k.s }}>{src.kind}</span>
                     <span className="flex-1 text-[14.5px] text-[var(--text-primary)]">{src.name}</span>
                     <ExternalLink size={15} className="text-[var(--text-tertiary)] shrink-0 mt-0.5" aria-hidden="true" />
@@ -130,7 +145,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
                 </li>
               );
             })}
-          </ul>
+          </ol>
         </section>
 
         <section aria-labelledby="changes" className="mt-10 text-[13px] text-[var(--text-tertiary)]">
@@ -139,7 +154,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
             {s.updates.map((u) => <li key={u.date + u.note}>{formatDate(u.date)} — {u.note}</li>)}
           </ul>
           <p className="mt-4">
-            This brief summarises published reporting and statements; it is not original reporting. See something wrong? <a href={`${MAIN_SITE}/contact`} className="underline underline-offset-4 hover:text-[var(--text-primary)]">Send a correction</a>.
+            This brief summarises published reporting and statements; it is not original reporting. It was prepared with the help of AI assistants, checked against the sources above, and published by {AUTHOR.name}, who is responsible for what it says — see our <Link href="/standards#ai" className="underline underline-offset-4 hover:text-[var(--text-primary)]">editorial standards</Link>. See something wrong? <a href={`${MAIN_SITE}/contact`} className="underline underline-offset-4 hover:text-[var(--text-primary)]">Send a correction</a>.
           </p>
         </section>
 

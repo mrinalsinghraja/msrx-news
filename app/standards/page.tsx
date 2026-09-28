@@ -39,7 +39,7 @@ export default function Standards() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Every brief ends with <strong>five to ten sources</strong>, each linked and labelled by type: <em>Official</em> (a statement from someone involved), <em>Primary report</em> (original research or data), or <em>Reporting</em> (other news organisations). Where we can, we link the official statement rather than coverage of it.
+            Every brief ends with <strong>five to ten sources</strong>, each linked and labelled by type: <em>Official</em> (a statement from someone involved), <em>Primary report</em> (original research or data), or <em>Reporting</em> (other news organisations). Where we can, we link the official statement rather than coverage of it. A numbered marker such as [2] after a sentence names the sources that report it.
           </p>
 
           <h2 id="certainty">What is known, and what isn’t</h2>
@@ -55,9 +55,17 @@ export default function Standards() {
             Spotted an error? <a href={`${MAIN_SITE}/contact`}>Tell us</a>, with a link to a source if you have one.
           </p>
 
+          <h2 id="ai">How we use AI</h2>
+          <p>
+            Briefs are prepared with the help of AI assistants, which help gather and summarise published statements and reporting. That help comes with the same rules as everything else here: every fact is attributed, checked against the sources linked at the end of the brief, and marked with the sources that report it.
+          </p>
+          <p>
+            Every brief is published by <a href={AUTHOR.url}>{AUTHOR.name}</a>, who decides what appears on this site and is responsible for what it says. Each brief says so at the end, because readers deserve to know how what they read is made.
+          </p>
+
           <h2 id="independence">Independence</h2>
           <p>
-            Briefs are written by {AUTHOR.name}. {SITE_NAME} is independent and is not affiliated with the companies or governments it reports on.
+            Briefs are published by <a href={AUTHOR.url}>{AUTHOR.name}</a>. {SITE_NAME} is independent and is not affiliated with the companies or governments it reports on.
           </p>
         </div>
 
