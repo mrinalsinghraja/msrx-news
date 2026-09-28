@@ -19,6 +19,12 @@ Every story is one entry in `lib/news.ts`. The front page, each story page (`app
 its social card, the RSS feed, the sitemap and `llms.txt` are all generated from that list —
 there is no per-story page to write.
 
+## Writing a new brief
+
+Use the standard brief in [`docs/PROMPT.md`](docs/PROMPT.md): paste it into a Claude Code
+session, fill in the topic or event, and it researches, writes, verifies and publishes
+to the house rules. `CLAUDE.md` points every session at it.
+
 ## Adding a story
 
 1. Add an entry at the **top** of `stories` in `lib/news.ts` (newest first). Choose the `slug`
