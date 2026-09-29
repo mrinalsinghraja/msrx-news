@@ -50,6 +50,50 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "anthropic-claude-sonnet-5-5-launch",
+    headline: "Anthropic releases Claude Sonnet 5.5, saying it is 30% faster and up to 30% cheaper per task",
+    standfirst:
+      "Anthropic says the mid-tier model keeps Sonnet 5’s price of $2 and $10 per million tokens but needs fewer tokens; the independent firm Artificial Analysis measured a higher cost per task at maximum effort.",
+    category: "AI",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    place: "Online — Anthropic’s Claude Platform, Amazon Web Services, Google Cloud and Microsoft Foundry",
+    body: [
+      "Anthropic announced Claude Sonnet 5.5 on 28 September 2026, calling it the second model in its Claude 5.5 family and “a clear upgrade over Claude Sonnet 5” that “runs 30%+ faster” and “costs up to 30% less for most work”.[1][4] Business Today reported the launch on 29 September.[5] Anthropic’s page does not give a time of day for the announcement.[1]",
+      "Anthropic said the list price is unchanged from Sonnet 5, at $2 per million input tokens, $10 per million output tokens and $0.20 per million tokens for cache reads, and that “in our testing, it costs up to 30% less per task” because it “typically needs far fewer tokens to do the same work”.[1][2] Claude Opus 5.5 is priced at $4 and $20.[1][4] VentureBeat reported that it had asked Anthropic how the speed gain was measured and would update when it heard back.[4]",
+      "On Anthropic’s own tests, Sonnet 5.5 scored 70.6% on Terminal-Bench 4.0, a coding evaluation, against 10.3% for Sonnet 5 and 66.4% for Opus 5.5, and 55.5% on CursorBench 4.0 against 57.8% for Opus 5.5.[1][4] Anthropic said Opus 5.5 “remains clearly stronger at complex, open-ended work requiring sustained judgment”.[1] Box, Zendesk and Slack, quoted by Anthropic from early testing, reported respectively that Sonnet 5.5 was “2.4x faster” and “used 12% fewer total tokens”, that tickets were “processed 20% faster”, and that it used about 14% fewer output tokens.[1][4]",
+      "Artificial Analysis, an independent benchmarking firm, said on 28 September that Sonnet 5.5 at maximum effort scored 56 on its Intelligence Index, “just 2 points behind Opus 5.5 (max)”, but used “the highest Output Tokens per Task we’ve seen” and cost $7.60 per task, about 50% more than Sonnet 5.[6] It measured 64% on Terminal-Bench 4.0.[6] It ran its tests on a pre-release deployment that Anthropic later found had a bug affecting structured outputs, said it would re-run them, and Anthropic expects any effect on the scores to be small.[1][6] Both Artificial Analysis and VentureBeat noted that the $2 and $10 price matches OpenAI’s GPT-6 Sol.[4][6]",
+      "Anthropic said Sonnet 5.5 is the first Sonnet model to launch with cybersecurity safeguards like those on its most capable models, so that “higher-risk cybersecurity tasks will visibly fall back to Sonnet 5”, and with classifiers meant to block extraction of its reasoning.[1] Its developer documentation lists five breaking changes for code already running on Sonnet 5, including that that turning thinking off with “disabled” and forced tool use now return errors.[2] The model is available as claude-sonnet-5-5 on the Claude API, AWS, Google Cloud and Microsoft Foundry, and Anthropic said Claude Haiku 5.5 will follow “in the coming weeks”; TechCrunch noted that no firm date was given.[1][2][3]",
+    ],
+    keyDates: [
+      { date: "June 2026", what: "Sonnet 5 introduced at $2 and $10 per million tokens, according to VentureBeat" },
+      { date: "28 September 2026", what: "Anthropic announces Sonnet 5.5; VentureBeat publishes at 11:00 am PT and TechCrunch the same day" },
+      { date: "28 September 2026", what: "Artificial Analysis publishes its Intelligence Index results for Sonnet 5.5, run on a pre-release deployment" },
+      { date: "29 September 2026", what: "Business Today reports the launch (updated 9:13 AM IST)" },
+      { date: "“Coming weeks”", what: "Anthropic says Claude Haiku 5.5 will join the family; no date given" },
+    ],
+    confirmed: [
+      "Anthropic and its developer documentation both give Sonnet 5.5 the same list price as Sonnet 5: $2 per million input tokens and $10 per million output tokens.",
+      "The 30% speed gain and “up to 30% less per task” cost figure come from Anthropic’s own testing.",
+      "Sonnet 5.5 is available as claude-sonnet-5-5 on the Claude API, AWS, Google Cloud and Microsoft Foundry.",
+    ],
+    unclear: [
+      "Whether the per-task saving holds in independent tests — Artificial Analysis measured about 50% higher cost per task at maximum effort, and Anthropic’s figure is described as “up to”.",
+      "How Anthropic measured the speed gain; VentureBeat said it had asked and was awaiting a reply.",
+      "How Artificial Analysis’s results change once re-run on the public release.",
+      "The release date of Claude Haiku 5.5, and the exact time of Anthropic’s announcement, neither of which were given.",
+    ],
+    sources: [
+      { name: "Anthropic — Introducing Claude Sonnet 5.5", url: "https://www.anthropic.com/claude-sonnet-5-5", kind: "Official" },
+      { name: "Anthropic — What’s new in Claude Sonnet 5.5 (Claude Platform Docs)", url: "https://platform.claude.com/docs/en/models/sonnet-5-5/whats-new-sonnet-5-5", kind: "Official" },
+      { name: "TechCrunch — Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner", url: "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/", kind: "Reporting" },
+      { name: "VentureBeat — Anthropic launches Claude Sonnet 5.5 with 30% cost reduction per-task due to faster speeds and fewer tool calls", url: "https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-5-with-30-cost-reduction-per-task-due-to-faster-speeds-and-fewer-tool-calls", kind: "Reporting" },
+      { name: "Business Today — Anthropic introduces Claude Sonnet 5.5: Faster AI model promises lower costs", url: "https://www.businesstoday.in/technology/news/story/anthropic-introduces-claude-sonnet-5-5-faster-ai-model-promises-lower-costs-558406-2026-09-29", kind: "Reporting" },
+      { name: "Artificial Analysis — Claude Sonnet 5.5 reaches #2 on the Artificial Analysis Intelligence Index", url: "https://artificialanalysis.ai/articles/claude-sonnet-5-5", kind: "Primary report" },
+    ],
+    updates: [{ date: "2026-09-29", note: "First published." }],
+  },
+  {
     slug: "openai-pauses-training-after-sandbox-dns-escape",
     headline: "OpenAI pauses training of its most capable models after an agent reached the internet from a test sandbox",
     standfirst:
