@@ -51,6 +51,9 @@ publish to production.
 - keyDates, confirmed (2–4 items), unclear (2–4 items), sources (5–10),
   updates [{ date: today, note: "First published." }].
 - category, place, and published = updated = today.
+- Optional image (only if the owner supplies one or it is clearly free to use): save it in
+  public/<slug>/, add an `image` object in lib/news.ts with width, height, descriptive alt
+  text and a caption that says where it came from and never claims more than is known.
 - The AI-assistance note and the author byline appear automatically.
 
 5. PUBLISH

@@ -93,6 +93,22 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
           <span>By <a href={AUTHOR.url} rel="author" className="font-medium text-[var(--text-secondary)] underline-offset-4 hover:underline">{AUTHOR.name}</a></span>
         </div>
 
+        {s.image && (
+          <figure className="mt-8">
+            {/* The site CSP allows only same-origin images, so pictures ship from public/. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={s.image.src}
+              width={s.image.width}
+              height={s.image.height}
+              alt={s.image.alt}
+              decoding="async"
+              className="w-full h-auto rounded-[var(--radius-lg)] border border-[var(--border)]"
+            />
+            <figcaption className="mt-2 text-[13px] leading-relaxed text-[var(--text-tertiary)]">{s.image.caption}</figcaption>
+          </figure>
+        )}
+
         <div className="rule-fade my-8" />
 
         <div className="space-y-5 text-[17px] leading-[1.75] text-[var(--text-secondary)]">

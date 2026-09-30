@@ -23,6 +23,16 @@ export interface KeyDate {
   what: string;
 }
 
+/** An optional picture under the standfirst. Files live in public/<slug>/ because the CSP allows same-origin images only. */
+export interface StoryImage {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  /** Says where the picture came from and what it is. Never claim more than we know. */
+  caption: string;
+}
+
 export interface NewsStory {
   /** URL path: news.msrx.co.in/<slug>. Stable once published. */
   slug: string;
@@ -36,6 +46,8 @@ export interface NewsStory {
   updated: string;
   /** Where the events happened. */
   place: string;
+  /** Optional picture shown under the standfirst. */
+  image?: StoryImage;
   /** The brief itself: short, neutral, attributed paragraphs. */
   body: string[];
   keyDates: KeyDate[];
@@ -49,6 +61,60 @@ export interface NewsStory {
 
 /** Newest first. */
 export const stories: NewsStory[] = [
+  {
+    slug: "openai-launches-dots",
+    headline: "OpenAI launches Dots, always-on AI agents powered by GPT-6 Astra, weeks after Meta’s Muse",
+    standfirst:
+      "OpenAI says each dot has its own cloud computer, works on a user’s goals around the clock and asks for approval on sensitive actions; it is rolling out to Pro, Business Premium and Enterprise users in eligible markets.",
+    category: "AI",
+    published: "2026-09-30",
+    updated: "2026-09-30",
+    place: "San Francisco (OpenAI DevDay, Fort Mason) and online",
+    image: {
+      src: "/openai-launches-dots/dots-launch-artwork.webp",
+      width: 1280,
+      height: 857,
+      alt: "The word “dots” in glowing white and rainbow lettering on a black background, above four fuzzy cartoon characters: a blue blob wearing a black beret, a green frog, a yellow triangle with round glasses and closed eyes, and a pink heart in round sunglasses.",
+      caption:
+        "The dots logo and characters, from launch artwork supplied to MSRX News. We have not matched this image to a specific file on OpenAI’s announcement page; the artwork belongs to its creator.",
+    },
+    body: [
+      "OpenAI announced “dots” on 29 September 2026 at its DevDay conference, which it called “our biggest yet, with more than 20 major announcements”.[1][2] It describes dots as “remarkably capable, always-on agents built to handle everything”, powered by GPT‑6 Astra, each with “their own cloud computer”, able to “work towards your goals 24/7” and to connect to “over 4,000 apps” through plugins.[1] Simon Willison, who attended in Fort Mason, San Francisco, wrote in a live blog that the product was introduced at 10:03 by his clock; the blog does not state a time zone.[3]",
+      "According to OpenAI, a dot can be reached through ChatGPT on desktop, web and mobile and through Slack and Teams, with texting “coming soon”, and users can “hop on a voice call”.[1] Users start with a “primary dot” that they name, and OpenAI says it envisions “teams of dots working together” later.[1][4] OpenAI says users can open a dot’s computer “at any time to inspect its work” and can permit it to use their laptop.[1] It also previewed “specialist dots” with their own identity for access management, for use inside companies, and said it is working with Microsoft to integrate them with Agent 365.[1] MacRumors published its report at 3:44 pm PDT.[4]",
+      "OpenAI’s safety post says each dot works on its own cloud computer, separate from the user’s, and that supported website sign-ins keep passwords out of the model’s context.[5] While a user is not working with it, a dot can do “proactive research” with read-only tools that, OpenAI says, cannot send messages, change app content or control a browser or computer.[1][5] Before actions such as sending emails or changing files, a separate system called Auto-review checks the planned steps against the user’s instructions, Custom Rules and safety requirements.[5] Purchases with saved cards need the user’s approval, permanently deleting data needs confirmation each time, and changing a password or moving money between financial accounts is handed back to the user.[5] OpenAI adds: “Dots can still make mistakes, so always review consequential work.”[1]",
+      "OpenAI said dots are rolling out in ChatGPT to Pro and Business Premium users in eligible markets, that Enterprise, Edu and Healthcare users can try a beta once a workspace administrator enables it, and that the first dot is included in the plan “at no extra cost”.[1] Android Authority reported that Pro users outside the European Economic Area, Switzerland and the UK are covered, that Business Premium is available across supported regions, and that Enterprise access is off by default.[6] OpenAI said conversations with a dot do not count toward ChatGPT usage limits, while tasks it starts in Codex or ChatGPT Work do, and that plans carry extended limits for the first month.[1]",
+      "MacRumors described dots as OpenAI’s move “to compete with Meta’s popular Muse agent”, and Android Authority said they arrived “just weeks after Meta launched Muse”.[4][6] Meta announced Muse on 8 September 2026 as a personal AI agent that “doesn’t just answer questions, it actually does the work”.[7] Willison wrote that the product “does look very Muse-like”.[3] The OpenAI announcement and safety post we read do not mention Muse.[1][5]",
+      "Willison wrote that in a live demo of a dot named Dottie, “we got a ‘still checking’ and an embarrassing silent moment”, and that OpenAI’s create-your-dot link told him to switch to a desktop.[3] OpenAI points to its system card for its safeguards, evaluations and “remaining limitations”, which we have not reviewed, and we did not find independent testing of dots in the sources listed.[5]",
+    ],
+    keyDates: [
+      { date: "8 September 2026", what: "Meta announces Muse, a personal AI agent" },
+      { date: "29 September 2026", what: "OpenAI introduces dots at DevDay in San Francisco (10:03 by a live blogger’s clock, time zone not stated)" },
+      { date: "29 September 2026", what: "OpenAI publishes its dots announcement, safety post and DevDay recap; MacRumors reports at 3:44 pm PDT and Android Authority at 4:22 PM ET" },
+      { date: "First month after launch", what: "Extended plan limits for dots, according to OpenAI" },
+      { date: "“Soon” and “later”", what: "Texting a dot, wider access and teams of dots, with no dates given" },
+    ],
+    confirmed: [
+      "OpenAI says dots are powered by GPT‑6 Astra, have their own cloud computer and connect to over 4,000 apps.",
+      "OpenAI says dots are rolling out to Pro and Business Premium users in eligible markets, with an admin-enabled Enterprise beta.",
+      "OpenAI says purchases need approval and some sensitive steps, such as changing a password, are handed back to the user.",
+    ],
+    unclear: [
+      "Exactly which countries get dots: OpenAI says “eligible markets”, and Android Authority reports exclusions for Pro users that the OpenAI pages we read do not list.",
+      "How usage limits will work after the first month.",
+      "How well the safeguards hold in practice: OpenAI says dots can still make mistakes, and we found no independent testing.",
+      "When texting, teams of dots and wider access will arrive; OpenAI gives no dates.",
+    ],
+    sources: [
+      { name: "OpenAI — Introducing dots", url: "https://openai.com/index/introducing-dots/", kind: "Official" },
+      { name: "OpenAI — DevDay 2026 Recap", url: "https://openai.com/index/devday-2026-recap/", kind: "Official" },
+      { name: "Simon Willison — OpenAI DevDay 2026 live blog", url: "https://simonwillison.net/2026/Sep/29/openai-devday-2026-live-blog/", kind: "Reporting" },
+      { name: "MacRumors — OpenAI Launches Always-On ‘Dots’ Agents to Rival Meta’s Muse", url: "https://www.macrumors.com/2026/09/29/openai-launches-dots/", kind: "Reporting" },
+      { name: "OpenAI — How we build safety, security, and privacy into dots", url: "https://openai.com/index/how-we-build-safety-security-and-privacy-into-dots/", kind: "Official" },
+      { name: "Android Authority — OpenAI’s answer to Meta Muse is a cute AI agent that never clocks out", url: "https://www.androidauthority.com/openai-dots-chatgpt-always-on-ai-agents-3717020/", kind: "Reporting" },
+      { name: "Meta — Introducing Muse: The World’s First Personal AI Agent Built for Everyone", url: "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/", kind: "Official" },
+    ],
+    updates: [{ date: "2026-09-30", note: "First published." }],
+  },
   {
     slug: "anthropic-claude-sonnet-5-5-launch",
     headline: "Anthropic releases Claude Sonnet 5.5, saying it is 30% faster and up to 30% cheaper per task",
