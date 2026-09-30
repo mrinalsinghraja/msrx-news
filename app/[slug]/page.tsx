@@ -170,7 +170,7 @@ export default async function StoryPage({ params }: { params: Promise<{ slug: st
             {s.updates.map((u) => <li key={u.date + u.note}>{formatDate(u.date)} — {u.note}</li>)}
           </ul>
           <p className="mt-4">
-            This brief summarises published reporting and statements; it is not original reporting. It was prepared with the help of AI assistants, checked against the sources above, and published by {AUTHOR.name}, who is responsible for what it says — see our <Link href="/standards#ai" className="underline underline-offset-4 hover:text-[var(--text-primary)]">editorial standards</Link>. See something wrong? <a href={`${MAIN_SITE}/contact`} className="underline underline-offset-4 hover:text-[var(--text-primary)]">Send a correction</a>.
+            This brief summarises published reporting and statements; it is not original reporting. It was prepared with the help of AI assistants, checked against the sources above, and published by {AUTHOR.name} as general information, not professional advice. Claims are attributed to the sources that made them, and stories may develop, so please read the sources for the latest — see our <Link href="/standards#ai" className="underline underline-offset-4 hover:text-[var(--text-primary)]">editorial standards</Link>. See something wrong? <a href={`${MAIN_SITE}/contact`} className="underline underline-offset-4 hover:text-[var(--text-primary)]">Send a correction</a>.
           </p>
         </section>
 

@@ -60,7 +60,10 @@ export default function Standards() {
             Briefs are prepared with the help of AI assistants, which help gather and summarise published statements and reporting. That help comes with the same rules as everything else here: every fact is attributed, checked against the sources linked at the end of the brief, and marked with the sources that report it.
           </p>
           <p>
-            Every brief is published by <a href={AUTHOR.url}>{AUTHOR.name}</a>, who decides what appears on this site and is responsible for what it says. Each brief says so at the end, because readers deserve to know how what they read is made.
+            Every brief is published by <a href={AUTHOR.url}>{AUTHOR.name}</a>, who decides what appears on this site. Each brief says so at the end, because readers deserve to know how what they read is made.
+          </p>
+          <p>
+            Briefs summarise what others have published. They are general information, not original reporting and not legal, financial or other professional advice, and they are provided as they are, without any promise that they are complete or current. Stories develop, so please read the linked sources for the full and latest account. Each fact is attributed to the party that made the claim; a brief reporting a claim does not mean this site endorses it.
           </p>
 
           <h2 id="independence">Independence</h2>
