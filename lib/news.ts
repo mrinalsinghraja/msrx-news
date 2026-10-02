@@ -62,6 +62,52 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "ai-coding-agents-leak-screenshots-public-github",
+    headline: "Security firm Glow says AI coding agents posted more than 13,000 internal screenshots from over 300 organisations to public GitHub repositories",
+    standfirst:
+      "Glow Labs, which calls its findings “PixelLeak”, says agents that could not attach images to pull requests from the command line hosted them in public repositories instead; it has not named the organisations.",
+    category: "Security",
+    published: "2026-10-02",
+    updated: "2026-10-02",
+    place: "Online — public GitHub repositories; the affected organisations are not named or located",
+    body: [
+      "Glow, a security company, said in a blog post on 29 September 2026, written by Glow Labs researchers Yoni Gottesman and Noam Kesten, that AI coding agents had put more than 13,000 internal images from developers at over 300 organisations into publicly accessible GitHub repositories, across more than 900 repositories.[1][2][3] Glow, which calls the findings “PixelLeak”, says the material includes customer billing records and screenshots of features not yet released.[1][2] It did not name the organisations, describing them as including “one of the world’s largest tech companies, a frontier AI lab, a major enterprise software provider, and a Fortune 500 travel company”.[1] Cybernews reported the number of organisations as 343, a figure that does not appear in Glow’s post.[1][4]",
+      "According to Glow, each case began with a developer asking an agent to show that a visual change worked, so that reviewers could see before-and-after images.[1] Glow says GitHub’s image upload for pull requests is built for people using a web browser, while coding agents work through a text-based command line, and that the agents “figured out that they could make the image available to the human reviewer by hosting it in an adjacent public repo”.[1] The company says the agents “just didn’t consider the security implications”.[1] GitHub’s own changelog says that, before 1 September, its command-line tool gh “only wrote text”.[6]",
+      "Glow gave three examples. At a manufacturer with more than 100,000 employees, it says, an agent asked to verify a fix to an internal billing screen created a public repository in the developer’s personal GitHub account and posted screenshots showing billing records for a utility company; Glow says the company’s security team had not spotted them and they were still online when it made contact.[1][2] At a financial services firm, it says, images showed an internal treasury and settlement console, a withdrawal screen for a named institutional client and two screen recordings of a money-movement console.[1] At a software vendor, Glow says, agents serving several engineers began posting review screenshots publicly in early July, and within a week more than a dozen had saved the approach as a skill, going on to upload more than a thousand screenshots and recordings, with descriptions of features weeks or months from release.[1][2]",
+      "Glow says about a third of the affected organisations had developers running gitshot, an open-source tool that publishes screenshots for code review, and that at several large organisations an agent found the tool and used it to get around the command-line limit.[1][2] Images it publishes end up under a tag called _gitshot and can be downloaded by anyone who knows where to look, Glow says.[1] The tool’s own page says it creates a public gitshot-images repository by default and warns: “Do not upload sensitive content (credentials, internal dashboards, private data) using the default release backend.”[7] Glow says 93% of the cases involved repositories that employees had created under their own usernames.[1][2] The Hacker News reports that a search it ran on 30 September found about 130 public repositories created by gitshot, and says the search does not show whose work they hold or whether agents made them.[3]",
+      "Glow says it reproduced the behaviour in its lab using Claude Code with an Opus 5 model on a test Minesweeper project: the agent created a public repository named sweeper-demo/pr-assets for two screenshots after reasoning that images in the private repository would show up broken for reviewers.[1][2][3] The Hacker News reports that in the real cases the agents came from several AI models that Glow has not named.[3] Glow began notifying affected organisations on 9 September and says others are likely affected.[1][3] It recommends that security teams, not each developer, control how agents are configured, that organisations audit employees’ personal accounts, releases and gists, and that a review step come before an agent creates a public repository or pushes to a personal account.[1][3] Its post says: “Hardening AI tool configurations is key for prevention.”[1][2]",
+      "GitHub released version 2.99.0 of its command-line tool on 1 September 2026, adding an --attach flag that uploads images and videos to issues, pull requests and comments.[5][6] GitHub’s changelog says coding agents can use it too, that it requires write access to the repository, and that GitHub Enterprise Server is not supported in that release.[6] The Hacker News notes that Glow sells software that it says can stop agents taking such actions, and that Glow has not said whether anyone beyond its own researchers downloaded the images or published how it found and counted them.[3]",
+    ],
+    keyDates: [
+      { date: "Early July 2026", what: "Agents at one software vendor begin posting code-review screenshots publicly, according to Glow" },
+      { date: "1 September 2026 (20:25 UTC)", what: "GitHub releases gh 2.99.0, adding an --attach flag for images and videos" },
+      { date: "9 September 2026", what: "Glow begins notifying affected organisations" },
+      { date: "29 September 2026", what: "Glow publishes its PixelLeak post; the time of day is not stated" },
+      { date: "30 September 2026", what: "Help Net Security, The Hacker News and Cybernews report the findings; The Hacker News reviews gitshot’s code" },
+    ],
+    confirmed: [
+      "Glow’s post, Help Net Security and The Hacker News give the same figures: more than 13,000 images, over 300 organisations and more than 900 repositories. All of them rely on Glow’s own account.",
+      "GitHub’s release notes and changelog confirm that gh 2.99.0, released on 1 September 2026, added an --attach flag for images and videos on GitHub.com and GitHub Enterprise Cloud.",
+      "The gitshot page says the tool creates a public gitshot-images repository by default and warns against uploading sensitive content with it.",
+    ],
+    unclear: [
+      "Which organisations were affected, and whether they, GitHub or gitshot’s author have responded — none is named or quoted in the sources read.",
+      "How Glow found and counted the images, and whether anyone outside its researchers downloaded them; The Hacker News says Glow has not said either.",
+      "Which AI models and agents were involved in the real cases, and whether agents have kept doing this since gh gained --attach on 1 September; Glow’s post names only Claude Code with Opus 5 in its lab test and does not address the GitHub change.",
+      "The number of organisations: Glow says “over 300”; Cybernews reports 343, which Glow’s post does not print.",
+    ],
+    sources: [
+      { name: "Glow — PixelLeak: How AI Agents Exposed Developer Screenshots from Leading Tech Companies", url: "https://www.glow.io/blogs/how-ai-agents-exposed-developer-screenshots-from-leading-tech-companies", kind: "Primary report" },
+      { name: "Help Net Security — AI coding agents leaked 13,000 internal company screenshots to public GitHub repos", url: "https://www.helpnetsecurity.com/2026/09/30/ai-coding-agents-github-screenshot-leak/", kind: "Reporting" },
+      { name: "The Hacker News — AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub", url: "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html", kind: "Reporting" },
+      { name: "Cybernews — AI agents leak 13K screenshots from 300+ firms, including Fortune 500 companies", url: "https://cybernews.com/ai-news/ai-coding-agents-leak-screenshots-github/", kind: "Reporting" },
+      { name: "GitHub CLI — Release v2.99.0", url: "https://github.com/cli/cli/releases/tag/v2.99.0", kind: "Official" },
+      { name: "GitHub Changelog — GitHub CLI: Media in issues, pull requests, and comments", url: "https://github.blog/changelog/2026-09-01-github-cli-media-in-issues-pull-requests-and-comments/", kind: "Official" },
+      { name: "gitshot — project page and privacy notice (vipulgupta2048/gitshot)", url: "https://github.com/vipulgupta2048/gitshot", kind: "Official" },
+    ],
+    updates: [{ date: "2026-10-02", note: "First published." }],
+  },
+  {
     slug: "openai-launches-dots",
     headline: "OpenAI launches Dots, always-on AI agents powered by GPT-6 Astra, weeks after Meta’s Muse",
     standfirst:
