@@ -62,6 +62,54 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "openai-releases-722-math-manuscripts-internal-model",
+    headline: "OpenAI releases 722 mathematical manuscripts it says were produced by an unreleased internal model",
+    standfirst:
+      "OpenAI published the papers, grouped into 372 result families, in a GitHub repository with Lean formalisations for some of them; an independent advisory group of mathematicians says only the mathematical community can assess the results.",
+    category: "Science",
+    published: "2026-10-07",
+    updated: "2026-10-07",
+    place: "Online — the openai/math repository on GitHub; OpenAI is based in San Francisco, US",
+    body: [
+      "OpenAI said in a research post dated 6 October 2026 that it is “releasing a broad range of new mathematical results produced by an internal frontier model”, and published them in a public GitHub repository, openai/math.[1][2] The repository says it holds 722 manuscripts organised into 372 “families” of related papers, each classified by mathematical discipline.[2][6] Scientific American reported that OpenAI revealed the results at 6 P.M. EDT (22:00 UTC, or 03:30 IST on 7 October); GitHub shows the repository’s first commit at 21:58 UTC.[2][5] Gizmodo’s headline and report give the figure as 377 results.[7]",
+      "According to the repository, the model was posed about 4,000 problems during the evaluation, and the outputs were grouped into families and manuscripts after “requiring an appropriate level of significance”.[2] OpenAI says the average result used the equivalent of roughly three hours of ChatGPT Pro thinking, and that it is publishing ten summaries of the model’s reasoning.[1][2][6] The repository says the results are “at different stages of verification”, that not all have Lean formalisations — proofs that a computer can check — and that “Some of the unformalized results could have issues.”[2] It names two exceptions to its fixed procedure: work on a zero-free region for the Riemann zeta function and a proof of the Hodge Conjecture for CM abelian varieties, and says one Riemann zeta write-up was “human edited for readability”.[2]",
+      "The repository’s catalogue describes, among other results, a proof that the Riemann zeta function and every Dirichlet L-function have no zeros where the real part exceeds 7/8, which it calls the quasi-Riemann hypothesis, and a proof of the full Birch–Swinnerton-Dyer leading-term formula for elliptic curves over the rationals that meet a condition on their Selmer groups.[2][7] Scientific American reported that the claimed results also include a solution to the four-dimensional Kakeya conjecture and improvements to important computer algorithms.[5] A spokesperson for OpenAI told Scientific American that the model, which OpenAI has not released, produced almost every result in response to a single prompt given to a single AI agent, and also said some results might have taken multiple attempts.[5] OpenAI says it is “working to responsibly release the model that produced these results” and will fund workshops, conferences and special programmes on major results produced by AI.[1]",
+      "OpenAI says it consulted the Advisory Group on Mathematics and Artificial Intelligence (AGMAI), based at the Institute for Advanced Study, on how to release the results.[1][3] The group’s nine members include Timothy Gowers, Martin Hairer and Edward Witten, and it says it operates independently of any AI company.[3] In a statement dated 6 October, AGMAI called the release “an important event for mathematics” and said its advisory role “should not be interpreted as a judgment of the impact of these results or an endorsement of the process by which OpenAI obtained them”.[3] It added that “only the mathematical community can undertake the assessment that is needed”.[3]",
+      "AGMAI’s recommendations of 29 September 2026 say a lab should publish, for each result, “the name of the model, the prompts used, a (summarized) chain of thought, the time taken, and the estimated cost of computation”.[4][6] They also say: “we do not endorse this practice, and we ask them to stop testing advanced mathematical problems on proprietary models.”[4][7] OpenAI spokesperson Lindsay McCallum Rémy told Gizmodo: “AGMAI’s advice and public recommendations have informed how we’re sharing the results.”[7] Gizmodo reported that the results came from the same unreleased model as OpenAI’s earlier Navier–Stokes result.[7]",
+      "Andrew Sutherland, a mathematician at the Massachusetts Institute of Technology, told Scientific American: “Until and unless they release the model and people can replicate their results, I think you should treat any claims about one-shotting problems with a single agent as unverified.”[5] Daniel Litt, a mathematician at the University of Toronto, told the magazine: “To me, it’s going to be a good thing for mathematics.”[5] Scientific American said the results will take mathematicians months to work through, and The Verge said their full impact will likely take time to be felt.[5][6]",
+    ],
+    keyDates: [
+      { date: "September 2026", what: "OpenAI says its model has “resolved more than 100 long-standing open problems”, according to The Verge" },
+      { date: "29 September 2026", what: "AGMAI publishes its recommendations for releasing AI-generated mathematics" },
+      { date: "6 October 2026, 18:00 EDT (22:00 UTC; 03:30 IST on 7 October)", what: "OpenAI reveals the results in the openai/math GitHub repository, according to Scientific American" },
+      { date: "6 October 2026", what: "OpenAI publishes its research post; AGMAI publishes a statement on the release" },
+      { date: "6 October 2026, 21:50 ET", what: "Gizmodo publishes its report, quoting an OpenAI spokesperson" },
+      { date: "No date given", what: "Release of the model, and workshops and conferences that OpenAI says it will fund" },
+    ],
+    confirmed: [
+      "OpenAI’s repository says it holds 722 manuscripts in 372 families, produced by an unreleased internal model that was posed about 4,000 problems.",
+      "OpenAI says the average result used the equivalent of roughly three hours of ChatGPT Pro thinking, and it has published ten reasoning summaries.",
+      "The repository says not every result has a Lean formalisation and that some unformalised results could have issues.",
+      "AGMAI says its advisory role is not an endorsement of the results or of how OpenAI obtained them.",
+    ],
+    unclear: [
+      "Which results hold up: AGMAI and Scientific American say mathematicians still have to assess them, and we found no independent review of specific proofs in the sources read.",
+      "The model’s name and the prompts and compute for each result; the OpenAI post and repository pages we read give an average compute figure and do not name the model.",
+      "The count: the repository lists 372 families and 722 manuscripts, while Gizmodo reports 377 results.",
+      "When OpenAI will release the model or announce the workshops it says it will fund.",
+    ],
+    sources: [
+      { name: "OpenAI — Sharing AI progress in mathematics", url: "https://openai.com/index/sharing-ai-progress-in-mathematics/", kind: "Official" },
+      { name: "OpenAI — openai/math repository on GitHub (README and manuscript map)", url: "https://github.com/openai/math", kind: "Primary report" },
+      { name: "AGMAI — On OpenAI’s Release of Mathematical Results (6 October 2026) and member list", url: "https://agmai.org/", kind: "Official" },
+      { name: "AGMAI — Responsible Release of AI-Generated Mathematics (29 September 2026)", url: "https://agmai.org/general-sep29/", kind: "Official" },
+      { name: "Scientific American — OpenAI unleashes hundreds more math results upon a field already in shock", url: "https://www.scientificamerican.com/article/openai-unleashes-hundreds-more-math-results-upon-a-field-already-in-shock/", kind: "Reporting" },
+      { name: "The Verge — OpenAI drops another batch of mathematical breakthroughs", url: "https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github", kind: "Reporting" },
+      { name: "Gizmodo — OpenAI Dumps 377 New Math Results on GitHub, Publishes Hand-Wringing Blog Post", url: "https://gizmodo.com/openai-dumps-377-new-math-results-on-github-publishes-hand-wringing-blog-post-2000822613", kind: "Reporting" },
+    ],
+    updates: [{ date: "2026-10-07", note: "First published." }],
+  },
+  {
     slug: "ai-coding-agents-leak-screenshots-public-github",
     headline: "Security firm Glow says AI coding agents posted more than 13,000 internal screenshots from over 300 organisations to public GitHub repositories",
     standfirst:
