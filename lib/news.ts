@@ -87,7 +87,7 @@ export const stories: NewsStory[] = [
       { date: "No date given", what: "Release of the model, and workshops and conferences that OpenAI says it will fund" },
     ],
     confirmed: [
-      "OpenAI’s repository says it holds 722 manuscripts in 372 families, produced by an unreleased internal model that was posed about 4,000 problems.",
+      "OpenAI’s repository says it holds 722 manuscripts in 372 families, and that the vast majority of results came from an unreleased internal model that was posed about 4,000 problems.",
       "OpenAI says the average result used the equivalent of roughly three hours of ChatGPT Pro thinking, and it has published ten reasoning summaries.",
       "The repository says not every result has a Lean formalisation and that some unformalised results could have issues.",
       "AGMAI says its advisory role is not an endorsement of the results or of how OpenAI obtained them.",
@@ -108,6 +108,10 @@ export const stories: NewsStory[] = [
       { name: "Gizmodo — OpenAI Dumps 377 New Math Results on GitHub, Publishes Hand-Wringing Blog Post", url: "https://gizmodo.com/openai-dumps-377-new-math-results-on-github-publishes-hand-wringing-blog-post-2000822613", kind: "Reporting" },
     ],
     updates: [
+      {
+        date: "2026-10-07",
+        note: "Clarified under “confirmed” that the repository says the vast majority of results, not all, came from the unreleased model; we had said all 722 manuscripts did.",
+      },
       {
         date: "2026-10-07",
         note: "Split the catalogue sentence so each result cites only the sources that report it; noted in key dates that the repository’s first commit came two minutes before the release time Scientific American gives.",
