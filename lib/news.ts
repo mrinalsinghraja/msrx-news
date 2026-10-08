@@ -62,6 +62,50 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "openai-gpt-6-intelligent-ui-chatgpt",
+    headline: "OpenAI brings GPT-6 and “Intelligent UI” to ChatGPT users, with interactive charts, buttons and tools in answers",
+    standfirst:
+      "OpenAI said on 7 October 2026 that ChatGPT can now answer with interactive interfaces and begin answering while it is still thinking; paid tiers get the update first and Free and Go tiers follow on 8 October.",
+    category: "AI",
+    published: "2026-10-08",
+    updated: "2026-10-08",
+    place: "Online — ChatGPT (web and mobile apps)",
+    body: [
+      "OpenAI said in a post dated 7 October 2026 that GPT-6 in ChatGPT introduces “Intelligent UI”, a capability that lets ChatGPT answer with “fully interactive user interfaces”.[1] According to OpenAI, responses can include graphics, tappable buttons, forms, charts and interactive experiences, and the format depends on the question, with a plain text answer given when that is most useful.[1] The Verge reported that the update lets ChatGPT combine text with diagrams, charts, forms and buttons, and that users can ask it to build tools such as a retirement savings calculator, a retro game or a bill splitter.[1][2]",
+      "OpenAI said the rollout to ChatGPT Plus, Pro, Business and Enterprise users started on 7 October in the Chat tab, and expands to Free and Go users the next day; it said Enterprise availability depends on workplace admin settings.[1] Plus, Pro, Business and Enterprise users get the GPT-6 Sol model and Free and Go users get GPT-6 Luna.[1][3] OpenAI said the models powering Work and Codex are not changing in this release.[1] OpenAI did not give a time of day for the rollout in the sources read.[1][2][3][4][5] OpenAI said ChatGPT is used by more than 1.2 billion people each week.[1]",
+      "OpenAI said it built a library of native, streamable components and a compiler that shows the interface progressively as the model generates it.[1] It said GPT-6 was trained with the help of evaluations of the interfaces it creates for clarity, usefulness and completeness, and that “There's still work ahead to improve the model's design judgment”.[1] Aarush Selvan, a product manager at OpenAI, told TechCrunch that “ChatGPT has predominantly been a text-based interface”, and told Wired that a design team had spent time deciding when a diagram, chart or buttons add value rather than clutter.[4][5] TechCrunch and Wired reported that users can ask for fewer visuals.[4][5]",
+      "OpenAI also said ChatGPT can now begin answering while it continues to think, building an answer across several partial responses.[1] OpenAI said GPT-6 Instant starts answering 44% sooner on average than GPT-5.6 Instant for questions that need web search, and that in an internal evaluation of difficult problems GPT-6 correctly addressed the key aspect of the question more often than GPT-5.6.[1] The Decoder reported that OpenAI says this cuts wait times by 44 percent.[3] OpenAI said that in adversarial testing GPT-6 showed stronger resistance to attempts to bypass its safety training, and pointed to a system card for more detail.[1][2]",
+      "The Decoder reported that Google shipped a similar feature in its Gemini chatbot in May, called “Neural Expressive”, and Wired reported that Google announced a comparable “generative UI” for Search earlier in 2026.[3][5] Wired’s Reece Rogers, who tested the interface before launch, wrote that a shift toward generative interfaces “may spark an identity crisis for designers”.[5]",
+    ],
+    keyDates: [
+      { date: "September 2026 (“last month”)", what: "OpenAI introduces the first GPT-6 models for paid customers, according to OpenAI’s 7 October post and The Verge" },
+      { date: "7 October 2026 (Wednesday)", what: "OpenAI publishes its post and starts rolling out GPT-6 with Intelligent UI to Plus, Pro, Business and Enterprise users; time of day not reported" },
+      { date: "7 October 2026, 11:00 PDT (18:00 UTC; 23:30 IST)", what: "TechCrunch publishes its report, which describes a call in which OpenAI staff demonstrated the feature to journalists" },
+      { date: "7 October 2026, 19:10 UTC (00:40 IST on 8 October)", what: "The Verge publishes its report" },
+      { date: "8 October 2026", what: "Rollout expands to Free and Go users, per OpenAI (“tomorrow” in its 7 October post)" },
+    ],
+    confirmed: [
+      "OpenAI says GPT-6 in ChatGPT adds Intelligent UI, which answers with interactive graphics, buttons, forms and charts when it judges they help.",
+      "Plus, Pro, Business and Enterprise users get GPT-6 Sol from 7 October and Free and Go users get GPT-6 Luna from 8 October, according to OpenAI; The Verge and The Decoder report the same model split, and TechCrunch and Wired report the same rollout timing.",
+      "OpenAI says ChatGPT can now begin answering while it continues to think.",
+      "OpenAI says the update applies to the Chat experience and does not change the models behind Work and Codex.",
+    ],
+    unclear: [
+      "How the speed and answer-quality figures hold up: OpenAI’s post gives no independent test of them, and we found no independent test in the sources read.",
+      "How often Intelligent UI appears in ordinary use; Wired describes a “quick hands-on” before launch, with three examples.",
+      "The time of day the rollout began, which none of the sources gave.",
+      "How the 44% figure is best described: OpenAI says GPT-6 Instant starts answering 44% sooner for web-search questions, while The Decoder describes it as a 44 percent cut in wait times.",
+    ],
+    sources: [
+      { name: "OpenAI — GPT-6 and Intelligent UI for everyone (7 October 2026)", url: "https://openai.com/index/gpt-6-for-everyone/", kind: "Official" },
+      { name: "The Verge — ChatGPT’s ‘Intelligent UI’ update fills its responses with pictures, charts, and buttons", url: "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6", kind: "Reporting" },
+      { name: "The Decoder — ChatGPT with GPT-6 ditches mostly text output for interactive UI with charts, buttons, and mini apps", url: "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/", kind: "Reporting" },
+      { name: "TechCrunch — ChatGPT is getting a lot more visual, with the launch of a new interface", url: "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/", kind: "Reporting" },
+      { name: "WIRED — The New ChatGPT Is More Show Than Tell", url: "https://www.wired.com/story/openai-chatgpt-intelligent-ui-is-more-show-than-tell/", kind: "Reporting" },
+    ],
+    updates: [{ date: "2026-10-08", note: "First published." }],
+  },
+  {
     slug: "openai-releases-722-math-manuscripts-internal-model",
     headline: "OpenAI releases 722 mathematical manuscripts it says were produced by an unreleased internal model",
     standfirst:
