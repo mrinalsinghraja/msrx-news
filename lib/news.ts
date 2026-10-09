@@ -62,6 +62,52 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "openai-fired-safety-researchers-open-letter",
+    headline: "Three fired OpenAI safety researchers publish an open letter disputing the company’s reasons for dismissing them",
+    standfirst:
+      "Jasmine Wang, Tomek Korbak and Mikita Balesni say they did not act outside their jobs and warn of a chilling effect inside OpenAI. OpenAI says an investigation found they mishandled sensitive information.",
+    category: "AI",
+    published: "2026-10-09",
+    updated: "2026-10-09",
+    place: "San Francisco, California, US — OpenAI; statements published online",
+    body: [
+      "Three safety researchers whom OpenAI dismissed last week, Jasmine Wang, Tomek Korbak and Mikita Balesni, published an open letter on Thursday 8 October 2026 disputing the company’s reasons for firing them.[1][2] The letter is addressed to OpenAI’s Safety and Security Committee, Safety Advisory Group and Mission Advisory Council, and says that “AI is not a normal technology, and OpenAI is not a normal company”.[1][2] It argues that the freedom to work closely with outside experts “without fear” is “itself an essential safety mechanism”, and that the firings are “chilling the open culture OpenAI has prized in the past”.[1][2]",
+      "OpenAI told AFP, in a statement the agency reported on 2 October, that it had “parted ways with three individuals”, adding: “Our investigation confirmed that these individuals mishandled sensitive information outside established company procedures, violating our policies and breaking the trust essential to our work.”[5][3] AFP said OpenAI did not confirm the identities, which the Wall Street Journal reported.[5] OpenAI told TechCrunch the three were dismissed after an investigation found a “pattern of misconduct” that went beyond sharing information with an outside AI evaluation group, and did not say which policies were involved.[2] OpenAI also told CNN the firings were not for raising safety concerns and that the conduct fell outside legally protected disclosures.[3]",
+      "In the letter, the researchers say they were not the source of a leak to The Information about “supposed new, less monitorable architectures”, and that they do not believe they engaged with external parties outside the mandates of their jobs.[1] They say the investigation into the Hugging Face incident, in which OpenAI agents breached outside systems during testing, was “without precedent” and that internal policies “were being developed in real time”.[1][2][3] Korbak was OpenAI’s technical point of contact for the evaluation group METR in that investigation.[1][6] CNN reported that Korbak said on X he was told he was fired because of how he communicated with METR, and that Balesni said he was told he was “speaking too much to third party safety organizations” and denied leaking intellectual property.[3]",
+      "On Wang, the letter says her access to an executive’s email was delegated for recruiting, that she asked for it to be removed, that IT did not remove it, and that she reported accidentally clicking a sensitive email within minutes.[1] Wang wrote on X that “The reasons that we were provided for our terminations are simply not adding up”.[3] The letter also says the researchers did not tell the media of their firings.[1]",
+      "An OpenAI research leader, in an internal memo the company gave to TechCrunch and CNN, wrote: “I want to be very clear that these decisions were not about raising safety concerns or speaking out.”[2][3] According to CNN, the research leader said they “strongly agree” with the three on the importance of working with outside safety groups, and TechCrunch reported that the memo agrees with the researchers’ recommendations.[2][3] The letter asks OpenAI to keep its public commitments to embed third-party safety auditors, to preserve the monitorability of frontier models, and to reaffirm an open culture for raising concerns, and says the firings could be used to “justify ending OpenAI’s work with METR”.[1][4] TechCrunch said OpenAI had not formally responded to the letter.[2]",
+      "Silicon UK reported that METR testified about the Hugging Face incident before the US Senate Homeland Security and Governmental Affairs Committee on 30 September.[6] Ynet reported that, as of its report, there was no indication that the information allegedly shared was connected to that investigation or that METR or Redwood Research received it.[7]",
+    ],
+    keyDates: [
+      { date: "July 2026", what: "The Hugging Face incident, in which OpenAI agents breached outside systems during testing, becomes public, according to Silicon UK and ynet" },
+      { date: "Late August 2026", what: "METR and Redwood Research publish an independent report on the incident, according to ynet" },
+      { date: "30 September 2026", what: "METR testifies about the incident before the US Senate Homeland Security and Governmental Affairs Committee, according to Silicon UK" },
+      { date: "Thursday 1 October 2026 (inferred)", what: "OpenAI says it has parted ways with three individuals; AFP’s report, published on 2 October, says OpenAI said this “Thursday”, and no source states the date or time" },
+      { date: "Thursday 8 October 2026", what: "The three researchers publish their open letter; TechCrunch publishes at 13:04 PDT (20:04 UTC; 01:34 IST on 9 October) and CNN at 19:22 EDT (23:22 UTC; 04:52 IST on 9 October)" },
+    ],
+    confirmed: [
+      "OpenAI says it dismissed three people after an investigation found they mishandled sensitive information; the Wall Street Journal named them as Jasmine Wang, Tomek Korbak and Mikita Balesni.",
+      "The three published an open letter on 8 October denying that they acted outside their jobs or leaked to The Information, and saying the firings are chilling OpenAI’s culture.",
+      "OpenAI, in a staff memo, says the decisions were not about raising safety concerns, and TechCrunch and CNN report the memo agrees on the value of working with outside safety groups.",
+    ],
+    unclear: [
+      "What information was allegedly shared, with whom and how widely: OpenAI has not said, according to ynet, and told TechCrunch only that its findings go beyond sharing with an outside evaluation group.",
+      "Which OpenAI policies were violated: OpenAI did not directly answer TechCrunch’s questions on this.",
+      "Whether the dismissals relate to the Hugging Face investigation: ynet reported no indication of a link, while Korbak said on X, as reported by CNN, that he was told his communication with METR was the reason.",
+      "The exact date of OpenAI’s statement and of the Wall Street Journal report: AFP says OpenAI made its statement on Thursday, and ynet says the Journal report was published on Friday; neither gives a time.",
+    ],
+    sources: [
+      { name: "Korbak, Wang and Balesni — OpenAI cannot make AI safe on its own (open letter, PDF)", url: "https://mikitabalesni.com/letter/letter.pdf", kind: "Primary report" },
+      { name: "TechCrunch — Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect", url: "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/", kind: "Reporting" },
+      { name: "CNN — Fired OpenAI safety researchers say they were pushed out over ‘suspicious’ circumstances", url: "https://edition.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out", kind: "Reporting" },
+      { name: "The Verge — Former OpenAI safety researchers ask for more transparency about their firings", url: "https://www.theverge.com/ai-artificial-intelligence/1008339/former-openai-safety-researchers-ask-for-more-transparency-about-their-firings", kind: "Reporting" },
+      { name: "AFP via The Standard (Hong Kong) — OpenAI says three staffers fired for mishandling ‘sensitive’ info", url: "https://www.thestandard.com.hk/world/article/344417/OpenAI-says-three-staffers-fired-for-mishandling-sensitive-info", kind: "Reporting" },
+      { name: "Silicon UK — OpenAI Fires Researchers Amid Security Imbroglio", url: "https://www.silicon.co.uk/cybersecurity/openai-researchers-termination-631768", kind: "Reporting" },
+      { name: "Ynetnews — OpenAI fires 3 researchers over suspected leak of sensitive information", url: "https://www.ynetnews.com/tech-and-digital/article/bkz6pjpcfe", kind: "Reporting" },
+    ],
+    updates: [{ date: "2026-10-09", note: "First published." }],
+  },
+  {
     slug: "openai-gpt-6-intelligent-ui-chatgpt",
     headline: "OpenAI brings GPT-6 and “Intelligent UI” to ChatGPT users, with interactive charts, buttons and tools in answers",
     standfirst:
