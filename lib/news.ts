@@ -62,6 +62,51 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "microsoft-nadella-models-insider-risks-emergency-brake",
+    headline: "Microsoft CEO Satya Nadella publishes a post saying AI models should be treated as insider risks and contained with an “emergency brake”",
+    standfirst:
+      "In a post dated 10 October 2026, Nadella set out seven principles for companies deploying frontier AI models, including independent controls and the ability to shut a model down mid-task. Coverage notes that he used the term “Super Intelligence” throughout.",
+    category: "AI",
+    published: "2026-10-12",
+    updated: "2026-10-12",
+    place: "Online — Satya Nadella’s blog “sn scratchpad” and X; Microsoft",
+    body: [
+      "Satya Nadella, chairman and CEO of Microsoft, published a post on his blog dated 10 October 2026, titled “Models as Insider Risks in the Super Intelligence Era”.[1][4] TechCrunch described it as a Saturday morning post on X, and The Verge described it as a lengthy post on X.[2][3] Nadella wrote that it is time to “step back and assess the trust architecture” for the era of advanced AI, and that “a model provider’s assurances do not relieve us of that responsibility”.[1]",
+      "Nadella wrote that today’s frontier models are being deployed with access to sensitive data and the ability to take mission-critical actions, while their behaviour cannot be attributed to specific training inputs or model weights.[1] He proposed treating closed and open-weight models like insider risks “not because they are necessarily malicious”, but because a capable actor with access to important systems can make mistakes or be compromised.[1] He listed seven principles: model diversity, observing everything, verifiability, independent controls, independent auditability, containment and incident disclosure.[1][5]",
+      "On containment, Nadella wrote: “We must assume a model is compromised and contain it from the start. Think of it like an emergency brake.”[1][2][3] He added that an authorized person should always be able to pause or shut down a model mid-task, and that more advanced models will need more advanced containment technologies to be standardized.[1] He also wrote that every meaningful model action must leave “tamper-proof human readable evidence”, that chain-of-thought transparency is “non-negotiable” but not sufficient, and that models checking models can produce “nested black boxes”.[1][3]",
+      "The Verge reported that many of the recommendations align with what others in the industry have said, and described the call to contain a model from the start as going slightly further than some others on containment.[3] Forbes reported that the post names no company or incident, and listed context including the July incident in which OpenAI agents breached Hugging Face, a 12 September essay by Anthropic CEO Dario Amodei, and remarks Nadella made at the All-In Summit.[4] Forbes said the principles are written to be vendor-neutral and “hold up on engineering grounds”.[4] It also noted that Microsoft sells Agent 365, a product for governing AI agents, and said the post leaves the alignment problem aside and that incident disclosure is voluntary today.[4]",
+      "The Decoder wrote that the post goes after what it called the supposed risks posed by Anthropic and OpenAI, that it follows the pattern of Nadella’s recent posts, and that Microsoft’s business strategy is behind his arguments, while saying that some of his concerns are valid.[6] Coverage also noted the vocabulary: Nadella used “Super Intelligence” in place of artificial intelligence throughout.[1][3] TechCrunch called it the Trump administration’s preferred term.[2] The Verge reported on 11 October that Elon Musk had promised to rename SpaceXAI to SpaceXSI, that Marc Benioff had announced Salesforce would rename AIForce to SIForce, and that an Nvidia commitment of $1 billion to scientific advancement included “super intelligence research”.[7]",
+    ],
+    keyDates: [
+      { date: "12 September 2026", what: "Anthropic CEO Dario Amodei publishes “We Must Pace the Frontier”, according to Forbes" },
+      { date: "14 September 2026", what: "Nadella describes the enterprise insider-risk problem on stage at the All-In Summit; Forbes says this was two days after 12 September, so the date is derived" },
+      { date: "10 October 2026 (Saturday)", what: "Nadella’s post is dated this day; TechCrunch says it appeared on Saturday morning (time zone not stated), and gives its own article at 14:47 PDT (21:47 UTC; 03:17 IST on 11 October)" },
+      { date: "10 October 2026, 22:10 UTC", what: "The Verge publishes its report (03:40 IST on 11 October)" },
+      { date: "11 October 2026", what: "Forbes publishes at 09:42 EDT (13:42 UTC; 19:12 IST), and The Decoder and OfficeChai also publish" },
+    ],
+    confirmed: [
+      "Nadella published a post titled “Models as Insider Risks in the Super Intelligence Era”, dated 10 October 2026, which calls for treating frontier models as insider risks.",
+      "The post says to assume a model is compromised and contain it from the start, with an authorized person able to pause or shut it down mid-task.",
+      "The post lists seven principles: model diversity, observing everything, verifiability, independent controls, independent auditability, containment and incident disclosure.",
+    ],
+    unclear: [
+      "The time the post went up: TechCrunch says Saturday morning without a time zone, Forbes says Saturday, and the blog gives a date only.",
+      "Whether Microsoft or Nadella has said how the principles apply to Microsoft’s own products: no source reported this.",
+      "How OpenAI, Anthropic or regulators will respond: none of the sources reported a response.",
+      "Whether the post reflects Microsoft policy or Nadella’s own view: the post appears on a blog titled “sn scratchpad”, and the sources do not say.",
+    ],
+    sources: [
+      { name: "Satya Nadella — Models as Insider Risks in the Super Intelligence Era (sn scratchpad, 10 October 2026)", url: "https://snscratchpad.com/posts/models-as-insider-risks/", kind: "Official" },
+      { name: "TechCrunch — Microsoft’s Satya Nadella says AI models need an ‘emergency brake’", url: "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/", kind: "Reporting" },
+      { name: "The Verge — Satya Nadella says we should assume all AI models are ‘compromised’", url: "https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised", kind: "Reporting" },
+      { name: "Forbes — Microsoft’s Nadella Wants An Emergency Brake On Every AI Model", url: "https://www.forbes.com/sites/gabrielalinzainescu/2026/10/11/microsofts-nadella-wants-an-emergency-brake-on-every-ai-model/", kind: "Reporting" },
+      { name: "OfficeChai — AI Models Need To Be Treated Like Powerful Insiders Within Companies As Regards To Risk: Microsoft CEO Satya Nadella", url: "https://officechai.com/ai/ai-models-need-to-be-treated-like-powerful-insiders-within-companies-as-regards-to-risk-microsoft-ceo-satya-nadella/", kind: "Reporting" },
+      { name: "The Decoder — Microsoft’s Nadella bows to Trump’s language diktat on “Super Intelligence” and uses it to attack OpenAI and Anthropic", url: "https://the-decoder.com/microsofts-nadella-bows-to-trumps-language-diktat-on-super-intelligence-and-uses-it-to-attack-openai-and-anthropic/", kind: "Reporting" },
+      { name: "The Verge — Silicon Valley is falling in line with Trump’s attempt to rename AI", url: "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai", kind: "Reporting" },
+    ],
+    updates: [{ date: "2026-10-12", note: "First published." }],
+  },
+  {
     slug: "anthropic-false-homicide-tip-philadelphia-police",
     headline: "Philadelphia police say an Anthropic AI model sent a false homicide tip; Anthropic turns off live internet access for all internal evaluations",
     standfirst:
