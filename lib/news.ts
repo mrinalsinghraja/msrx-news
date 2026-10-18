@@ -62,6 +62,52 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "deepseek-v4-1-flash-1017-release",
+    headline: "DeepSeek releases V4.1-Flash-1017, an update it says is faster and gives shorter outputs, with open weights and a new search API",
+    standfirst:
+      "DeepSeek said on 17 October 2026 that its V4.1-Flash-1017 model scores higher than the previous version and finishes tasks faster, and published the weights under the MIT licence. The benchmark results are DeepSeek’s own; The Decoder reported that independent benchmarks had not yet come out.",
+    category: "AI",
+    published: "2026-10-18",
+    updated: "2026-10-18",
+    place: "Hangzhou, China (DeepSeek); online — DeepSeek web, app and API, and Hugging Face",
+    body: [
+      "DeepSeek’s API change log, dated 17 October 2026, said DeepSeek V4.1 Flash has been upgraded to DeepSeek-V4.1-Flash-1017 and that its web and app models have been updated.[1] The change log said the API calling method and pricing remain unchanged, and that developers reach the new version with the model name deepseek-flash.[1] Bloomberg, in a report carried by The Economic Times, said the Hangzhou-based company unveiled the model late on Saturday afternoon in posts on X saying it had “stronger benchmark performance, faster task completion, and shorter outputs than the previous version”.[4] DeepSeek’s model card calls it a “minor update to DeepSeek-V4.1-Flash” with improvements across reasoning, coding, agentic tasks and visual benchmarks, and says the repository and weights are licensed under the MIT License.[2] The Decoder reported that the weights are on Hugging Face and ModelScope, and OpenRouter lists the model as released on 17 October 2026 with a 1.0 million-token context window.[3][5]",
+      "DeepSeek’s change log and model card report scores of 77.0 on DeepSWE v1.1, 42.3 on Terminal-Bench 4.0 and 42.6 on Humanity’s Last Exam without tools (HLE), against 74.2, 31.2 and 36.8 for the previous V4.1 Flash.[1][2] The model card’s table also lists scores for other models: on DeepSWE v1.1, 74.0 for Opus 5 and 73.0 for GPT-5.6 Sol, while Opus 5 scores higher than the new model on several others, including HLE (56.3), Terminal-Bench 4.0 (51.8), ProgramBench (37.0) and NL2Repo-Bench (75.3), and GPT-5.6 Sol scores higher on HLE (44.5).[2] The model card said Terminal-Bench 4.0 was run with the Claude Code harness and DeepSWE v1.1 with the Mini-SWE-V2 harness.[2] The Decoder reported that these are DeepSeek’s own benchmarks, that the model beats larger rivals in several coding and agent categories, and that “Independent benchmarks haven’t come out yet”.[3]",
+      "The Decoder reported that, in DeepSeek’s cost chart for DeepSWE, the model reaches 77.0% at an average cost of just under $0.20 per task, against about $0.50 for the predecessor, and that rivals in the chart cost between $2 and over $10 per task.[3] OpenRouter lists several hosts for the model, with prices that include $0.05 per million input tokens and $0.60 per million output tokens at one host, and $0.08 and $0.50 at another.[5] Artificial Analysis, a model benchmarking site, lists the earlier DeepSeek V4.1 Flash (Max), released in September 2026, at 39 on its Intelligence Index, ninth of 120 models, and describes it as notably fast but very verbose.[6]",
+      "DeepSeek also opened its in-house search engine to developers through Search and Fetch APIs, and said the engine handles hundreds of millions of search requests every day.[1] The Decoder reported that each endpoint costs $0.75 per 1,000 calls, and that DeepSeek API users can use the features free through server-side tools in DeepSeek Harness, Claude Code and Codex until 31 October 2026 (16:00 UTC).[3]",
+      "Bloomberg reported that DeepSeek had an outage of about five hours earlier in the week that left its servers unreachable, which some experts attributed to a lack of sufficient computing resources.[4] Bloomberg reported that the V4.1-Flash model released in early September was priced at such a steep discount that shares of MiniMax Group, Z.ai and Alibaba fell on the Hong Kong stock exchange.[4] The Decoder reported that the Chinese government reportedly plans to tighten rules on publishing open-weight models or block their release, and that one deciding factor is whether a system ranks among the 10 most capable.[3] The Hindu reported that on Friday 16 October 2026 China’s Ministry of Commerce and Ministry of Science and Technology announced a draft plan, “Announcement No. 48”, proposing a ban on exporting 14 technologies and restrictions on 26 more across AI, biomedicine and photovoltaics.[7] A Ministry of Commerce spokesperson said that “most AI technologies will continue to be freely exportable” and that the draft adds 23 key AI technologies covering foundation models, intelligent agents, computing clusters and information-processing technologies.[7] The ministry’s statement added that China remained “committed to building an open-source AI innovation ecosystem”, that open-source AI projects “would be eligible for facilitation measures”, and that technologies already public through open-source publication or academic papers would “generally be exempt from export controls”.[7]",
+    ],
+    keyDates: [
+      { date: "10 September 2026", what: "DeepSeek releases the earlier V4.1 Flash, according to its API change log; Bloomberg describes it as unveiled early in September" },
+      { date: "Earlier in the week of the 17 October release", what: "DeepSeek has an outage of about five hours, according to Bloomberg (exact date and time not reported)" },
+      { date: "16 October 2026", what: "China’s Ministry of Commerce and Ministry of Science and Technology announce draft “Announcement No. 48”, according to The Hindu, whose report is stamped 4:01 pm IST that day" },
+      { date: "17 October 2026", what: "DeepSeek’s change log records the V4.1-Flash-1017 update; OpenRouter lists the release as 17 October; Hugging Face’s page data shows the repository created at 02:40 UTC; Bloomberg says the model was unveiled late on Saturday afternoon (time zone not reported)" },
+      { date: "17 October 2026, 21:53 IST", what: "The Economic Times’ copy of the Bloomberg report shows this last-updated time" },
+      { date: "31 October 2026, 16:00 UTC", what: "Free use of DeepSeek’s Search and Fetch tools through server-side tools ends, according to The Decoder" },
+    ],
+    confirmed: [
+      "DeepSeek released V4.1-Flash-1017 on 17 October 2026 on its web, app and API, and published the weights under the MIT licence on Hugging Face.",
+      "DeepSeek says API pricing and the way the model is called are unchanged, and its own benchmark table shows higher scores than the previous V4.1 Flash on every listed test.",
+      "DeepSeek opened its search engine to developers through Search and Fetch APIs, and The Decoder reports a price of $0.75 per 1,000 calls.",
+    ],
+    unclear: [
+      "How the model performs independently: The Decoder said independent benchmarks had not yet come out, and the Artificial Analysis page we found covers the earlier V4.1 Flash, not the 1017 update.",
+      "How it compares with rivals: DeepSeek’s own table shows it ahead of Opus 5 on some tests and behind on others, and the model card says only that Terminal-Bench 4.0 used the Claude Code harness and DeepSWE v1.1 the Mini-SWE-V2 harness.",
+      "Whether China’s draft rules would apply to open-weight releases like this one: The Decoder reports that the government reportedly plans to tighten rules on publishing open-weight models, while the Ministry of Commerce statement reported by The Hindu says most AI technologies remain freely exportable and that technologies already public through open-source publication would generally be exempt. None of the sources links the draft to DeepSeek’s release.",
+      "The time of release: Bloomberg says Saturday afternoon without a time zone, and DeepSeek’s change log gives only the date.",
+    ],
+    sources: [
+      { name: "DeepSeek API Docs — Change Log (17 October 2026)", url: "https://api-docs.deepseek.com/updates", kind: "Official" },
+      { name: "DeepSeek on Hugging Face — DeepSeek-V4.1-Flash-1017 model card", url: "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017", kind: "Official" },
+      { name: "The Decoder — Deepseek V4.1 Flash 1017 beats larger rivals in agentic tasks while once again massively cutting per-task costs (17 October 2026)", url: "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/", kind: "Reporting" },
+      { name: "The Economic Times (Bloomberg) — DeepSeek pushes out updated AI model it says is faster, leaner", url: "https://economictimes.indiatimes.com/tech/artificial-intelligence/deepseek-pushes-out-updated-ai-model-it-says-is-faster-leaner/articleshow/135016984.cms", kind: "Reporting" },
+      { name: "OpenRouter — DeepSeek V4.1 Flash 1017 model page", url: "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017", kind: "Primary report" },
+      { name: "Artificial Analysis — DeepSeek V4.1 Flash (Max): intelligence, performance and price analysis", url: "https://artificialanalysis.ai/models/deepseek-v4-1-flash", kind: "Primary report" },
+      { name: "The Hindu — China considers new export curbs on solar, AI, biotech (published 16 October 2026, updated 18 October)", url: "https://www.thehindu.com/news/international/china-considers-new-export-curbs-on-solar-ai-biotech/article71591880.ece", kind: "Reporting" },
+    ],
+    updates: [{ date: "2026-10-18", note: "First published." }],
+  },
+  {
     slug: "google-gemini-4-argon-launch",
     headline: "Google releases Gemini 4 Argon to Gemini app, API and Antigravity users, two weeks after a limited rollout to cyber defenders",
     standfirst:
