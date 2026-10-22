@@ -62,6 +62,52 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "php-security-release-ai-found-vulnerabilities",
+    headline: "PHP project patches two critical remote-code-execution flaws that OpenAI and Wiz say were found with AI models",
+    standfirst:
+      "The PHP project released PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 on 21 October 2026 to fix two critical flaws that can allow unauthenticated remote code execution. OpenAI said Calif found one using GPT-5.6 Sol and that Wiz independently found both, with Wiz saying it used Gemini 4 Argon, GPT-5.6 Sol and its own tool; Elias Taylor wrote that public proof-of-concept exploits do not work against a vanilla PHP instance.",
+    category: "Security",
+    published: "2026-10-22",
+    updated: "2026-10-22",
+    place: "Global — PHP servers worldwide; disclosures published online by the PHP project, the PHP Foundation, OpenAI and Wiz",
+    body: [
+      "The PHP project’s security advisory, dated 21 October 2026, said PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution.[6] The advisory named them CVE-2026-109618, “RCE via OOM corruption”, and CVE-2026-109619, “RCE via stale global state”, and said all PHP installations serving web requests are at risk, with the risk highest for Apache with mod_php.[6] The PHP Foundation said the actual severity score is CVSS 9.2.[1] Wiz said PHP powers 70% of all websites in the world, and TechCrunch reported roughly 70%; the two sources differ on how far back the affected versions go, as listed below.[7][3] The PHP project said only an update is a complete solution, that PHP 8.1 and older no longer receive updates from the project, and that its security team provided minimal source backports for PHP 7.4, 8.0 and 8.1.[6]",
+      "OpenAI said Calif identified a critical flaw using GPT-5.6 Sol as part of OpenAI’s Patch the Planet initiative, and that Wiz also independently discovered and reported both vulnerabilities.[2] Wiz said it discovered the first vulnerability on 19 August 2026 using Wiz Atlas, Gemini 4 Argon and GPT-5.6 Sol, reported them to the PHP security team on 24 August, and that PHP acknowledged the reports on 21 September.[7] The PHP Foundation said Calif began an audit of PHP on 30 July 2026, that a Calif researcher reported an unconditional remote code execution on 11 August with the same root cause as a memory problem the Foundation had found in 2024, and that OpenAI independently reported the same root cause that day.[1] The Foundation said AI helps its team validate reports, but that “a person makes every call and works on every patch”, and that the growth of AI-assisted research means the team gets far more reports than before: 15 CVEs published since 1 July and more than 100 reports that were invalid, duplicates or not reproducible.[1]",
+      "The PHP Foundation said work on a fix for the 2024 finding had stalled and restarted repeatedly over months because each approach carried trade-offs such as compatibility breaks, new denial-of-service potential or changes to many third-party extensions, and called the delay “a structural failure” of its security team’s decision process and resources.[1] The Foundation said the two CVE IDs began circulating on online forums and social media on Tuesday 20 October at around 15:00 UTC with a wrong release time and a wrong score of 10.0, and that PHP brought its pre-announcement forward to 19:30 UTC and moved the release from 22 October at 14:00 UTC to 21 October at 14:00 UTC.[1] The Foundation said that Calif then mistakenly published a video of its proof of concept, which was later deleted, and that Chainguard, a distributor that had received the patch in advance, published built images containing the fix at 07:41 UTC on 21 October, more than six hours before the coordinated release.[1]",
+      "OpenAI said it engaged parts of the US government including the White House’s Super Intelligence Force, the Office of the National Cyber Director and the Cybersecurity and Infrastructure Security Agency (CISA), proposed a five-stage framework for responding to critical vulnerabilities and expects similar findings “to increase sharply in the coming months”.[2] The Decoder reported that the fix was coordinated over two months in five phases, and TechCrunch reported that the US National Security Agency warned on Wednesday that a website that cannot be patched immediately should be taken off the web until it can be.[4][3] TechCrunch reported that WordPress said the flaw is not WordPress-specific and that sites using its software must patch their servers with their hosting companies.[3]",
+      "Wiz said it demonstrated unauthenticated remote code execution on the latest container images of WordPress, Drupal and Joomla, and wrote that “LLMs can help adapt an exploit to different PHP versions, configurations and memory layouts”.[7] The PHP Foundation said it monitored proof-of-concept exploits that appeared after the leak and “did not identify any functional exploits” at the time of release.[1] In a blog post dated 21 October 2026, Elias Taylor wrote that the public proof-of-concept exploits on GitHub do not work against a vanilla PHP instance, and that the vulnerability is nowhere near as easy to exploit as Log4Shell or Heartbleed.[5] TechCrunch reported that OpenAI says researchers found the flaws before attackers did, and wrote that there were therefore no reports of exploits in the wild; OpenAI’s own post says “to our knowledge” frontier AI found them before attackers did.[3][2]",
+    ],
+    keyDates: [
+      { date: "30 July 2026", what: "Calif begins an audit of PHP under the Patch the Planet programme, according to the PHP Foundation" },
+      { date: "11 August 2026", what: "A Calif researcher reports an unconditional remote code execution; OpenAI independently reports the same root cause the same day, according to the PHP Foundation" },
+      { date: "19–24 August 2026", what: "Wiz says it discovered the first vulnerability on 19 August and reported the vulnerabilities to the PHP security team on 24 August" },
+      { date: "20 October 2026, about 15:00 UTC", what: "The two CVE IDs begin circulating online; PHP publishes its pre-announcement at 19:30 UTC, according to the PHP Foundation" },
+      { date: "21 October 2026, 07:41 UTC", what: "Chainguard publishes built images containing the fix before the release, according to the PHP Foundation" },
+      { date: "21 October 2026, 14:00 UTC", what: "Coordinated release of PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35, and public disclosure by OpenAI, Wiz and the PHP project (publication times of those posts not reported)" },
+    ],
+    confirmed: [
+      "The PHP project released PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 on 21 October 2026 to fix CVE-2026-109618 and CVE-2026-109619, and says only an update is a complete solution.",
+      "OpenAI and Wiz say AI models were used by the researchers who found and reported the flaws (GPT-5.6 Sol by Calif; Gemini 4 Argon, GPT-5.6 Sol and Wiz Atlas by Wiz), and TechCrunch and The Decoder report the same.",
+      "The PHP Foundation says its team monitored proof-of-concept exploits and did not identify a functional one at release, and TechCrunch reports no exploits in the wild were reported.",
+    ],
+    unclear: [
+      "How easy the flaws are to exploit in practice: Wiz reports working demonstrations on WordPress, Drupal and Joomla, while Elias Taylor wrote that public proof-of-concept code does not work against a vanilla PHP install. The sources do not report an independent test of either claim.",
+      "Which versions are affected: Wiz says versions back to PHP 5.4, TechCrunch says all versions since PHP 5 (2004), and the PHP project’s advisory lists the fixed branches and says PHP 8.1 and older no longer receive updates.",
+      "The NSA’s warning: we found it only as reported by TechCrunch and did not open the NSA’s own text.",
+      "The leak and embargo account: the timeline of the leak, Calif’s video and Chainguard’s early images is the PHP Foundation’s account, and the sources we read include no statement from Chainguard or Calif.",
+    ],
+    sources: [
+      { name: "The PHP Foundation — Today’s PHP Security Release, and How We’re Strengthening PHP Security (21 October 2026)", url: "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/", kind: "Official" },
+      { name: "OpenAI — Patch the Planet: global response coordination as agents uncover critical vulnerabilities (21 October 2026)", url: "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/", kind: "Official" },
+      { name: "TechCrunch — PHP Armageddon: OpenAI, Google’s Wiz find ancient holes, panicking the internet (21 October 2026)", url: "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/", kind: "Reporting" },
+      { name: "The Decoder — OpenAI’s GPT-5.6 Sol and Google’s Gemini 4 Argon found critical PHP flaw affecting millions of websites (21 October 2026)", url: "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/", kind: "Reporting" },
+      { name: "Elias Taylor — There isn’t an easy exploit for this PHP vulnerability (21 October 2026)", url: "https://eliastaylor.com/noexploit/", kind: "Primary report" },
+      { name: "PHP.net — Security advisory: Critical remote code execution vulnerabilities, update now (21 October 2026)", url: "https://www.php.net/index.php#2026-10-21-5", kind: "Official" },
+      { name: "Wiz Research — PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet", url: "https://www.wiz.io/blog/php2shell-php-rce", kind: "Primary report" },
+    ],
+    updates: [{ date: "2026-10-22", note: "First published." }],
+  },
+  {
     slug: "deepseek-v4-1-flash-1017-release",
     headline: "DeepSeek releases V4.1-Flash-1017, an update it says is faster and gives shorter outputs, with open weights and a new search API",
     standfirst:
