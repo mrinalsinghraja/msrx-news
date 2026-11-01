@@ -54,6 +54,7 @@ publish to production.
 - Optional image (only if the owner supplies one or it is clearly free to use): save it in
   public/<slug>/, add an `image` object in lib/news.ts with width, height, descriptive alt
   text and a caption that says where it came from and never claims more than is known.
+  Never show an ad in any picture: MSRX earns nothing from readers, so crop out ads and promos.
 - The AI-assistance note and the author byline appear automatically.
 
 5. PUBLISH
