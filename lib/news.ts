@@ -62,6 +62,50 @@ export interface NewsStory {
 /** Newest first. */
 export const stories: NewsStory[] = [
   {
+    slug: "ai-training-opt-out-policy-token-robots-txt",
+    headline: "Anthropic, Google, Microsoft and OpenAI say they will honour a shared robots.txt signal for AI training opt-outs; the IETF draft behind it has no formal standing",
+    standfirst:
+      "On 30 October 2026 Anthropic’s Kevin Kelley published an IETF draft for a single robots.txt token, __usage_ai-training, that websites can use to state AI training preferences, and Anthropic, Google, Microsoft and OpenAI said they will honour it, with Google and Microsoft starting in 2027.",
+    category: "Policy",
+    published: "2026-11-02",
+    updated: "2026-11-02",
+    place: "Online — IETF AI Preferences Working Group; statements by Anthropic, Google, Microsoft and OpenAI (locations not reported)",
+    body: [
+      "Kevin Kelley of Anthropic published an Internet-Draft, draft-kelley-aipref-training-preference-signal-00, on 30 October 2026.[1] It describes how a website operator can bind a preference such as “no AI training” to paths by writing ordinary robots.txt groups under a policy token, __usage_ai-training, in the User-Agent line.[1] The draft’s example disallows every path except /press-kit/.[1]",
+      "The Verge reported that OpenAI, Google, Microsoft and Anthropic say they will adopt the signal, and that today sites must state their AI training preferences separately to each company.[2] The Verge and Thurrott report that Anthropic has already adopted it and that Google and Microsoft plan to support it next year, with OpenAI saying “coming months”.[2][4] TNW reports Microsoft will honour it from 1 February 2027, and Search Engine Roundtable quotes a Google crawler-documentation note saying Google intends to support it in early 2027.[3][5]",
+      "Krishna Madhavan, a principal product manager for Microsoft Bing, wrote: “Publishers should not have to choose between being discoverable in Bing and deciding how generative models use their work.”[4] OpenAI’s announcement said: “This voluntary effort makes it easier for publishers and website operators to communicate the same preference to multiple participating providers at once.”[4] Meta communications head Andy Stone said: “We believe creating a common signal that conveys such preferences to multiple providers at once is an important step.” The Verge reports he did not say whether Meta will honour it.[2]",
+      "Google Search Advocate John Mueller wrote that when a site uses the token and does not explicitly specify Google-Extended, Google plans to treat it as if the publisher had disallowed Google-Extended, and that existing company-specific controls will keep working.[3] TNW reports Microsoft said blocking AI grounding “will significantly reduce your content’s visibility in AI-generated experiences”, and The Verge reports Microsoft said sites will still appear in Bing search results whatever their preferences.[2][5]",
+      "The draft says the token states a preference and is not a directive for crawling, that a site with no such group has expressed no preference, and that private agreements may override it.[1] The IETF datatracker page says the document “is not endorsed by the IETF and has no formal standing in the IETF standards process”.[6] Nate Hake, who says he has taken part in the working group, wrote on X that it is not finished at the IETF level, that significant areas of dispute remain, and that he is unhappy the current draft exempts the preferences from applying to anything a user does.[3] Paul Thurrott wrote that the change is “largely symbolic”.[4]",
+    ],
+    keyDates: [
+      { date: "30 October 2026", what: "Kevin Kelley publishes the Internet-Draft; Google, Microsoft and OpenAI announce support the same day (times not reported)" },
+      { date: "30 October 2026, 20:26 UTC", what: "The Verge publishes its report (01:56 IST on 31 October, our conversion); it later adds a comment from Meta" },
+      { date: "31 October 2026", what: "TNW publishes its report on the shared opt-out" },
+      { date: "1 February 2027", what: "Date from which TNW reports Microsoft will honour the new preferences; Google says early 2027 and OpenAI says “coming months”" },
+      { date: "3 May 2027", what: "The draft expires unless replaced or updated, according to its own text" },
+    ],
+    confirmed: [
+      "Kevin Kelley of Anthropic published draft-kelley-aipref-training-preference-signal-00 on 30 October 2026, defining the robots.txt policy token __usage_ai-training.",
+      "Anthropic, Google, Microsoft and OpenAI say they will honour the signal, with Google and Microsoft planning 2027 support and OpenAI saying “coming months”.",
+      "The IETF datatracker says the draft is not endorsed by the IETF and has no formal standing in its standards process.",
+    ],
+    unclear: [
+      "Whether Meta will honour the signal: Meta’s Andy Stone voiced support for a common signal without saying so.",
+      "Exact start dates: Microsoft is reported as 1 February 2027, Google as early 2027, and OpenAI has given no date beyond “coming months”.",
+      "Whether the working group will change the draft: Hake says significant areas of dispute remain, including how user actions are treated.",
+      "How many sites will use the token and how the companies’ existing controls, such as Google-Extended and GPTBot, will interact with it in practice.",
+    ],
+    sources: [
+      { name: "IETF — Machine-Readable Training Preference Signal, draft-kelley-aipref-training-preference-signal-00 (30 October 2026)", url: "https://www.ietf.org/archive/id/draft-kelley-aipref-training-preference-signal-00.html", kind: "Official" },
+      { name: "The Verge — The biggest names in AI are backing a new way to opt out of scraping (30 October 2026)", url: "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out", kind: "Reporting" },
+      { name: "Search Engine Roundtable — Google Adopts New AI Training Control (30 October 2026)", url: "https://www.seroundtable.com/google-ai-training-control-42430.html", kind: "Reporting" },
+      { name: "Thurrott.com — Anthropic, Google, Microsoft, and OpenAI Agree to Let Sites Opt Out of AI Training (30 October 2026)", url: "https://www.thurrott.com/a-i/343407/anthropic-google-microsoft-and-openai-agree-to-let-sites-opt-out-of-ai-training", kind: "Reporting" },
+      { name: "TNW — Google, Microsoft, OpenAI and Anthropic back one AI training opt-out (31 October 2026)", url: "https://thenextweb.com/news/ai-training-opt-out-robots-txt-google-openai-microsoft-anthropic", kind: "Reporting" },
+      { name: "IETF Datatracker — draft-kelley-aipref-training-preference-signal (last updated 30 October 2026)", url: "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/", kind: "Official" },
+    ],
+    updates: [{ date: "2026-11-02", note: "First published." }],
+  },
+  {
     slug: "tampered-claude-code-extension-cursor-marketplace",
     headline: "Cursor says a tampered Claude Code extension was on its marketplace from about 2:27am to 1:35pm PT on 29 October; Anthropic says its own systems were not compromised",
     standfirst:
